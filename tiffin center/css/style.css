@@ -1,0 +1,663 @@
+* {
+    font-family: "Playwrite AU VIC", cursive;
+    font-family: "poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #303030;
+}
+
+body {
+    background-color: #fcf5cb;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.Uname {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #f0ab08;
+}
+
+.navbar {
+    margin: 12px 2px 0px 2px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 72px;
+    box-shadow: 2px 4px #fcf5cb;
+    background: #fcf5cb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar.sticky {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.45);
+}
+
+.navbar .logo a {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.navbar .logo a b {
+    color: #f4bf41;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links ul li {
+    text-decoration: none;
+    padding: 10px;
+    list-style: none;
+    padding-right: 45px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: "poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: all .3s ease;
+
+}
+
+.nav-links ul li a:hover {
+    color: brown;
+}
+
+.navbar .order a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #f4bf41;
+    border-radius: 24px;
+    padding: 8px 16px;
+    font-size: 16px;
+    transition: all .3s ease;
+}
+
+
+.navbar .order a:hover {
+    background: #f4bf41;
+    color: #303030;
+}
+
+section {
+    width: 100%;
+    padding: 90px 9%;
+}
+
+#home {
+    display: flex;
+    gap: 20%;
+}
+
+#home .left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 52px;
+}
+
+#home .left h1 {
+    font-size: 64px;
+    line-height: 72px;
+}
+
+#home .left p {
+    font-size: 18px;
+    width: 500px;
+    color: #333;
+    line-height: 32px;
+    text-align: left;
+}
+
+#home .left a {
+    background: #f4bf41;
+    width: 124px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #000;
+    box-shadow: 2px 4px 8px #f4bf41;
+}
+
+#home .right img {
+    width: 100%;
+}
+
+#about .types {
+    margin-top: 16px;
+}
+
+#about .types .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.types h1 {
+    text-align: center;
+    padding-top: 70px;
+    font-size: 35px;
+}
+
+.des {
+    margin-top: 32px;
+    background-color: rgb(245, 226, 115);
+    width: 250px;
+    border-radius: 10px;
+    padding: 12px 16px;
+}
+
+.des .img img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.des h3 {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    font-family: "poppins", sans-serif;
+    margin: 16px auto 8px;
+}
+
+.des .intro {
+    font-size: 12px;
+    text-align: left;
+    font-weight: 500;
+    font-family: "poppins", sans-serif;
+    padding: 3px;
+    color: rgb(97, 95, 95);
+}
+
+.des .price {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 12px 4px 4px;
+}
+
+.des .price p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.des .price a {
+    background-color: #f0ab08;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    height: 32px;
+    width: 32px;
+}
+
+.products-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-preview .preview {
+    display: none;
+    padding: 7px;
+    text-align: center;
+    position: relative;
+    margin: 15px;
+    width: 250px;
+    background-color: rgb(245, 226, 115);
+    border-radius: 10px;
+}
+
+.products-preview .preview .target {
+    display: inline-block;
+}
+
+.products-preview .preview img {
+    height: 80px;
+    margin-right: 40px;
+}
+
+.products-preview .preview .fa-close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.products-preview .preview .fa-close:hover {
+    transform: rotate(90deg);
+}
+
+.products-preview .preview h3 {
+    font-family: "Playwrite AU VIC", cursive;
+    padding: 20px 0;
+    font-size: 18px;
+}
+
+.products-preview .preview .stars i {
+    padding: 3px 0;
+    color: brown;
+}
+
+.products-preview .preview .price {
+    padding: 7px 0;
+    font-size: 15px;
+    color: brown;
+}
+
+.products-preview .preview .pricebtn {
+    display: inline;
+    gap: 7px;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.products-preview .preview .pricebtn button {
+    padding: 5px;
+    font-size: 14px;
+    color: brown;
+    border: 1px solid brown;
+    border-radius: 10px;
+}
+
+.products-preview .preview .pricebtn .cart {
+    background: brown;
+    color: white;
+}
+
+.products-preview .preview .pricebtn .buy:hover {
+    background: brown;
+    color: white;
+}
+
+
+.hi {
+    margin-top: 10%;
+    background-image: url(./images/tiffin.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 230px;
+    width: 85%;
+    margin-left: 5%;
+    border-radius: 10px;
+}
+
+.hi h2 {
+    padding-top: 25px;
+    margin-left: 40px;
+    font-size: 45px;
+    font-family: "Playwrite AU VIC", cursive;
+}
+
+.hi p {
+    margin-left: 40px;
+    font-size: 23px;
+    font-family: "poppins", sans-serif;
+    text-transform: capitalize;
+    padding: 5px;
+    line-height: 1.5;
+    color: rgb(97, 95, 95);
+    font-weight: 500;
+}
+
+.serve h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 35px;
+    font-family: "Playwrite AU VIC", cursive;
+}
+
+.serve h6 {
+    text-align: center;
+    font-size: 15px;
+    font-family: "poppins", sans-serif;
+    font-weight: 500;
+    padding: 5px;
+    color: rgb(97, 95, 95);
+}
+
+.serve .content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.serve .row {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.desc {
+    background: #fcf5cb;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: all 0.5s ease;
+}
+
+.desc:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.desc .imgs img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.desc .desc-content {
+    padding: 16px;
+}
+
+.desc-content h3 {
+    font-size: 24px;
+    color: #f4bf41;
+}
+
+.abt h1 {
+    text-align: center;
+    font-size: 35px;
+    font-family: "Playwrite AU VIC", cursive;
+}
+
+.abt p {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    font-family: "poppins", sans-serif;
+    color: rgb(97, 95, 95);
+    line-height: 1.6;
+    padding: 10px;
+}
+
+.gal h1 {
+    padding-top: 20%;
+    text-align: center;
+    font-size: 35px;
+    font-family: "Playwrite AU VIC", cursive;
+}
+
+.desc1 {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.desc1 .imgs img {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.hi1 {
+    background-image: url(./images/netural.jpeg);
+    margin-top: 70px;
+    height: 300px;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+}
+
+.hi1 h2 {
+    text-align: center;
+    font-size: 35px;
+    font-family: "Playwrite AU VIC", cursive;
+    padding-top: 50px;
+}
+
+span {
+    color: brown;
+    font-size: 35px;
+}
+
+/* p {
+    text-align: center;
+    padding: 0px;
+    font-size: 14px;
+    font-family: "poppins", sans-serif;
+    color: rgb(132, 130, 130);
+} */
+
+strong {
+    font-size: 35px;
+}
+
+.contact {
+    margin-top: 72px;
+}
+
+.contact h1 {
+    text-align: center;
+    font-size: 35px;
+    font-family: "Playwrite AU VIC", "cursive";
+    padding-top: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .mats {
+    display: flex;
+    justify-content: center;
+}
+
+.contact button {
+    border-radius: 10px;
+    border: 1px solid burlywood;
+    text-align: center;
+    font-size: 12px;
+    width: 120px;
+    height: 25px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.contact h1 {
+    font-size: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 16px;
+    font-weight: 500;
+
+}
+
+.container .con p {
+    text-align: left;
+    font-size: 14px;
+    font-family: "poppins", sans-serif;
+    font-weight: 300;
+    color: rgb(72, 72, 72);
+    padding-top: 16px;
+}
+
+.container .con b {
+    color: burlywood;
+    font-weight: 500;
+}
+
+.container .con input {
+    width: 300px;
+    height: 38px;
+    padding: 6px 12px;
+    margin-top: 16px;
+    border-radius: 10px;
+    border: 1px solid burlywood;
+}
+
+
+.container .con #text {
+    width: 338px;
+    height: 80px;
+    padding: 6px 12px;
+    margin-top: 16px;
+    border-radius: 10px;
+    border: 1px solid burlywood;
+    color: rgb(93, 91, 91);
+    font-weight: 300;
+}
+
+.container .con #btn {
+    width: 324px;
+    height: 35px;
+    text-align: center;
+    margin-top: 26px;
+    border-radius: 50px;
+    border: 1px solid burlywood;
+    color: rgb(53, 52, 52);
+    font-weight: 300;
+    background-color: burlywood;
+}
+
+.container .con fieldset {
+    width: 300px;
+    padding: 8px 10px;
+    margin-top: 16px;
+    border-radius: 10px;
+    border: 1px solid burlywood;
+}
+
+/* edit */
+.con {
+    margin: 40px;
+    padding: 12px;
+}
+
+.mats .con input {
+    padding: 16px;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+    background-color: #000;
+}
+
+footer .foo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.foo h2 {
+    color: orange;
+    font-weight: 600;
+    font-family: "poppins", sans-serif;
+    font-size: 35px;
+}
+
+.foo b {
+    color: white;
+}
+
+.foo p {
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "poppins" sans-serif;
+    padding-top: 8px;
+}
+
+.foo h6 {
+    color: rgb(244, 230, 230);
+    font-weight: 200;
+    font-size: 12px;
+    padding-top: 6px;
+}
+
+.foo h5 {
+    color: orange;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: "poppins", sans-serif;
+    padding-top: 8px;
+}
+
+.foo h4 {
+    color: orange;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: "poppins", sans-serif;
+    padding: 8px;
+}
+
+.foo ul li {
+    list-style: none;
+    color: rgb(242, 233, 233);
+    padding: 8px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.foo .sign input {
+    background-color: rgb(53, 52, 52);
+    width: 140px;
+    height: 32px;
+    padding: 3px 8px;
+    color: white;
+    font-size: 12px;
+    font-family: "poppins", sans-serif;
+    font-weight: 600;
+    border: none;
+}
+
+.foo .sign {
+    display: flex;
+    padding-top: 8px;
+}
+
+.foo button {
+    background-color: orange;
+    font-size: 10px;
+    font-weight: 400;
+    font-family: "poppins", sans-serif;
+    border: none;
+    height: 32px;
+    width: 60px;
+
+}
+
+.burger.hidden {
+    display: none;
+}

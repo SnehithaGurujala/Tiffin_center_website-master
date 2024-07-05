@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container forms">
+    <div class="center">
+      <h1>Login</h1>
+      <form id="LoginForm">
+        <div class="inputs">
+          <div class="text">
+            <input type="text" placeholder="Username" id="username">
+          </div>
+          <div class="text">
+            <input type="password" placeholder="Password" id="password">
+          </div>
+        </div>
+        <div class="span">Forgot Password?</div>
+        <div class="signup">
+          <span class="signup">Don't have an account?
+            <a href="sign.html">Signup</a>
+          </span>
+        </div>
+        <div class="btn-fields">
+          <button type="submit" id="LoginBtn">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Login Form
+    document.querySelector('#LoginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const Username = document.querySelector('#username').value;
+      const Password = document.querySelector('#password').value;
+
+      if (Username === '' || Password === '') {
+        alert('Please fill in all fields');
+      } else {
+        console.log(Username, Password);
+        const storedUsername = localStorage.getItem('username');
+        const storedPassword = localStorage.getItem('password');
+
+        if (Username === storedUsername && Password === storedPassword) {
+          alert('Login Successful');
+          window.location.href = './index.html';
+        } else {
+          alert('Invalid username or password');
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
